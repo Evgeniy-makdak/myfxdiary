@@ -7,6 +7,7 @@
     <title>myFxDiary</title>
 </head>
 <body>
+    <script defer src="./scripts/main.js"></script>
     <div class="open">        
         <input id="dateOpen" type="text" placeholder="Дата открытия">
         <input id="valueOpen" type="text" placeholder="Объём">
@@ -19,11 +20,16 @@
         <input id="dateClose" type="text" placeholder="Дата закрытия">
         <input id="valueClose" type="text" placeholder="Объём">
         <input id="closePrice" type="text" placeholder="Цена закрытия">
-        <input id="svop" type="text" placeholder="Своп">
-        <input id="spread" type="text" placeholder="Спред">
+        <div class="svop">Своп</div>
+        <div class="spread">Спред</div>
         <input id="causeClose" type="text" placeholder="Причина закрытия">
     </div>
-    <button class="btn">Результат сделки</button>
-    <button class="btn">Добавить в отчёт</button>
+    
+    <button id="calcResult" class="btn" onclick="result()">Результат сделки</button>
+    <button id="addToTable" class="btn" onclick="addToTable()">Добавить в таблицу</button>
+    <div class="result">        
+        <div class="points"></div>
+        <div class="money"></div>
+    </div>
 </body>
 </html>

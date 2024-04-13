@@ -30,4 +30,25 @@
     background-color: rgb(119, 30, 30);
     color: aliceblue;
     box-shadow: 7px 7px gray;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 16px;
+    margin-left: 30px;
+    width: 120px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    box-shadow: 7px 7px gray;
+}
+
+.svop, .spread {
+    width: 130px;
+    height: 20px;
+    border: 0.5px solid gray;
+    box-shadow: 3px 3px gray;
+    text-align: center;
+    color: rgb(187, 184, 184);
+    font-size: 14px;
 }
