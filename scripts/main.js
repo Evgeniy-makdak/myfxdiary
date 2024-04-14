@@ -358,13 +358,41 @@ function result() {
 
       // Устанавливаем значения и цвета для свопа и спреда
       svop.forEach((element) => {
-        element.textContent = svopValue;
+        element.textContent = `своп ${svopValue}`;
         element.style.color = svopColor;
       });
       spread.forEach((element) => {
-        element.textContent = spreadValue;
+        element.textContent = `спред ${spreadValue}`;
         element.style.color = spreadColor;
       });
+
+      // Определяем количество знаков после запятой для пары
+      const decimalPlaces = currencyValue.includes('JPY') ? 2 : 4;
+      // console.log(decimalPlaces);
+      // console.log(typeof decimalPlaces);
+
+      // Вычисляем разницу между ценой закрытия и ценой открытия
+      const openPriceValue = parseFloat(openPrice.value);
+      const closePriceValue = parseFloat(closePrice.value);
+      const priceDifference = Math.round(
+        (closePriceValue - openPriceValue) * 10 ** decimalPlaces
+      );
+
+      // Вычисляем профит в пунктах с учётом спреда.
+      const profitPoints = priceDifference - parseFloat(spreadValue);
+      const valueCloseValue = parseFloat(valueClose.value);
+
+      // console.log(openPriceValue);
+      // console.log(closePriceValue);
+      // console.log(priceDifference);
+
+      // Выводим результаты
+      points.textContent = priceDifference - parseFloat(spreadValue);
+      money.textContent = (profitPoints * valueCloseValue) / closePriceValue;
+      console.log(valueCloseValue);
+      console.log(closePriceValue);
+
+      
     } else {
       alert(`No information found for deal: ${dealValue}`);
     }

@@ -33,16 +33,6 @@
     cursor: pointer;
 }
 
-.result {
-    margin-top: 16px;
-    margin-left: 30px;
-    width: 120px;
-    height: 30px;
-    border: 1px solid gray;
-    border-radius: 3px;
-    box-shadow: 7px 7px gray;
-}
-
 .info {
     width: 130px;
     height: 20px;
