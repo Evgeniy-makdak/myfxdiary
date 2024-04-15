@@ -382,9 +382,7 @@ function result() {
 
       // Выводим результаты
       points.textContent = priceDifference - parseFloat(spreadValue);
-      money.textContent = (profitPoints * valueCloseValue) / closePriceValue;
-      console.log(valueCloseValue);
-      console.log(closePriceValue);
+      money.textContent = ((profitPoints * valueCloseValue) / closePriceValue) * 10;
     } else {
       alert(`No information found for deal: ${dealValue}`);
     }
