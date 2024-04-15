@@ -368,8 +368,6 @@ function result() {
 
       // Определяем количество знаков после запятой для пары
       const decimalPlaces = currencyValue.includes('JPY') ? 2 : 4;
-      // console.log(decimalPlaces);
-      // console.log(typeof decimalPlaces);
 
       // Вычисляем разницу между ценой закрытия и ценой открытия
       const openPriceValue = parseFloat(openPrice.value);
@@ -382,17 +380,11 @@ function result() {
       const profitPoints = priceDifference - parseFloat(spreadValue);
       const valueCloseValue = parseFloat(valueClose.value);
 
-      // console.log(openPriceValue);
-      // console.log(closePriceValue);
-      // console.log(priceDifference);
-
       // Выводим результаты
       points.textContent = priceDifference - parseFloat(spreadValue);
       money.textContent = (profitPoints * valueCloseValue) / closePriceValue;
       console.log(valueCloseValue);
       console.log(closePriceValue);
-
-      
     } else {
       alert(`No information found for deal: ${dealValue}`);
     }

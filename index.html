@@ -16,20 +16,30 @@
       <input class="info" type="text" placeholder="Корректировка" />
     </div>
     <div class="information open">
-      <input id="dateOpen" type="text" placeholder="Дата открытия" />
-      <input id="valueOpen" type="text" placeholder="Объём" />
-      <input id="openPrice" type="text" placeholder="Цена открытия" />
-      <input id="carrency" type="text" placeholder="Инструмент" />
-      <input id="deal" type="text" placeholder="Позиция" />
-      <input id="causeOpen" type="text" placeholder="Причина открытия" />
+      <!-- <input id="dateOpen" type="text" placeholder="Дата открытия" /> -->
+      <textarea rows="2" placeholder="Дата открытия" id="dateOpen"></textarea>
+      <!-- <input id="valueOpen" type="text" placeholder="Объём" /> -->
+      <textarea rows="2" placeholder="Объём в формате 0.3" id="valueOpen"></textarea>
+      <!-- <input id="openPrice" type="text" placeholder="Цена открытия" /> -->
+      <textarea rows="2" placeholder="Цена открытия в формате 1.2345" id="openPrice"></textarea>
+      <!-- <input id="carrency" type="text" placeholder="Инструмент" /> -->
+      <textarea rows="2" placeholder="Инструмент в формате EUR/USD" id="carrency"></textarea>
+      <!-- <input id="deal" type="text" placeholder="Позиция" /> -->
+      <textarea rows="2" placeholder="Позиция (short, или long)" id="deal"></textarea>
+      <!-- <input id="causeOpen" type="text" placeholder="Причина открытия" /> -->
+      <textarea rows="2" placeholder="Причина открытия" id="causeOpen"></textarea>
     </div>
     <div class="information close">
-      <input id="dateClose" type="text" placeholder="Дата закрытия" />
-      <input id="valueClose" type="text" placeholder="Объём" />
-      <input id="closePrice" type="text" placeholder="Цена закрытия" />
+      <!-- <input id="dateClose" type="text" placeholder="Дата закрытия" /> -->
+      <textarea rows="2" placeholder="Дата закрытия" id="dateClose"></textarea>
+      <!-- <input id="valueClose" type="text" placeholder="Объём" /> -->
+      <textarea rows="2" placeholder="Объём в формате 0.3" id="valueClose"></textarea>
+      <!-- <input id="closePrice" type="text" placeholder="Цена закрытия" /> -->
+      <textarea rows="2" placeholder="Цена закрытия в формате 1.2345" id="closePrice"></textarea>
       <div class="info svop">Своп</div>
       <div class="info spread">Спред</div>
-      <input id="causeClose" type="text" placeholder="Причина закрытия" />
+      <!-- <input id="causeClose" type="text" placeholder="Причина закрытия" /> -->
+      <textarea rows="2" placeholder="Причина закрытия" id="causeClose"></textarea>
     </div>
 
     <button id="calcResult" class="btn" onclick="result()">
